@@ -15,10 +15,10 @@ export class HomePage  implements OnInit{
     const datos = localStorage.getItem('datos')
     if(datos){
       this.datos = JSON.parse(datos);
-      console.log('obtiene')
+      console.log('obtiene del localStorage')
     }else{
       this.api.obtenerDatos().subscribe((datos)=>{
-        console.log('no carga')
+        console.log('carga de la api')
         this.datos=datos;
         localStorage.setItem('datos',JSON.stringify(this.datos))
       });
