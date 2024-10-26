@@ -12,7 +12,7 @@ export class HomePage  implements OnInit{
   constructor(private api:ApiStreamingPeliculasService) {}
   
   ngOnInit() {
-    const datos = localStorage.getItem('datos')
+    const datos = localStorage.getItem('datosPeliculas')
     if(datos){
       this.datos = JSON.parse(datos);
       console.log('obtiene del localStorage')
